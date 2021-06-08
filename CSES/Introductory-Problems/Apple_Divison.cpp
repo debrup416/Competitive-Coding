@@ -30,6 +30,7 @@ int main()
         ans=min(ans,abs(sum-2*c));
     }
           cout<<ans;
+    return 0;
  
 }
  
