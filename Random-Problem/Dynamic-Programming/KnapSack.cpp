@@ -29,7 +29,7 @@ int main()
 		{		
 			if(j==0 || i==0)
 				table[i][j]=0;
-			else if(wt[n-1]<=W)
+			else if(wt[i-1]<=j)
 			{
 				table[i][j]=max( (val[i-1]+table[i-1][j-wt[i-1]]) ,table[i-1][j]);
 			}
@@ -40,17 +40,16 @@ int main()
 		}
 	}
 	
-	for(i=0;i<=n;i++)
+	/*for(i=0;i<=n;i++)
 	{
 		for(j=0;j<=W;j++)
 		{
 			cout<<table[i][j]<<"  ";
 		}
 		cout<<endl;
-	}
+	}*/
 	
 		 cout<<table[n][W];
 
 	 return 0;
 }
-
